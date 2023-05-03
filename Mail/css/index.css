@@ -5,3 +5,20 @@
   border: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: violet;
+  font-size: 20px;
+}
+
+/* Regole container */
+
+#container {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#result {
+  margin-top: 20px;
+}

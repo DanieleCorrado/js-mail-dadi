@@ -4,28 +4,40 @@ const validEmail = ["prova@gmail.com", "daniele@virgilio.it", "test@test.it"]
 
 let validUserEmail = 0;
 
-// Chiedo all'utente di inserire la propria mail
+let Form = document.getElementById("form");
 
-userEmail = prompt("Inserisci la tua Email:");
 
-// Esamino tutti gli elemeniti dell'array validEmail
+Form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-for (let i = 0; i < validEmail.length; i++) {
+  // inizializzo l'email inserita dall'utente
 
-  // Controllo se l'i-esimo elemento dell'array corrsponde alla mail inserita dall'utente
+  let userEmail = document.getElementById("user-email");
 
-  if( validEmail[i] === userEmail) {
+  // Esamino tutti gli elemeniti dell'array validEmail
 
-    validUserEmail = 1;
-    console.log("Puoi accedere all'evento");
-    i = validUserEmail.length;
+  for (let i = 0; i < validEmail.length; i++) {
+
+    // Controllo se l'i-esimo elemento dell'array corrsponde alla mail inserita dall'utente
+
+    if( validEmail[i] === userEmail.value) {
+
+      validUserEmail = 1;
+      document.getElementById("result").innerHTML = "Puoi accedere all'evento";
+      i = validUserEmail.length;
+
+    }
 
   }
 
+  if (validUserEmail === 0) {
+
+    document.getElementById("result").innerHTML = "Non puoi accedere all'evento";
+
+  }
+
+  validUserEmail = 0;
+
 }
 
-if (validUserEmail === 0) {
-
-  console.log("Non puoi accedere all'evento");
-
-}
+);

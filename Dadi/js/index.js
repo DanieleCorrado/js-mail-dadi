@@ -31,8 +31,6 @@ let Form = document.getElementById("form");
 
 const userNumber = 0;
 
-
-
 Form.addEventListener("submit", (e) => {
   e.preventDefault();
 
