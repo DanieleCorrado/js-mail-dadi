@@ -24,4 +24,9 @@ body {
 
 #result {
   display: none;
+  margin-top: 20px;
+}
+
+#result h2 {
+  margin-top: 10px;
 }
