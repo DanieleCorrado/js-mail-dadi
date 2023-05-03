@@ -9,7 +9,37 @@
   </head>
 
   <body>
-    
+
+      <div id="container">
+
+        <span>Inserisci un numero da 1 a 6</span>
+
+        <!-- Chiedo all'utente di inserire un valore da 1 a 6 -->
+
+        <form action="" id="form">
+
+          <input type="number" id="user-number" placeholder="inserici un numero...">
+
+          <button class="submit" type="submit">Invia</button>
+        </form>
+
+
+        <!-- Mostro il risultato del "lancio" del dado del computer e decreto il vincitore  -->
+
+        <div id="result">
+
+          <span>Il valore inserito dall'utente &eacute;: </span>
+
+          <span id="user-value"></span>
+          <span>, mentre il valore generato dal computer &eacute;:</span>
+
+          <span id="computer-value"></span>
+
+          <h2 id="winner"></h2>
+
+        </div>
+
+      </div>
     
 
     <!-- Javascript -->
